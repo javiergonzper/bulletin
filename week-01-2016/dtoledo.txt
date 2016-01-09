@@ -1,0 +1,10 @@
+TITLE: BDD (behaviour-driven development) testing and Behat
+URL: http://solidgear.es/en/blog/bdd-behaviour-driven-development-testing-and-behat-part-i
+DESCRIPTION: Short introduction about BDD basic concepts and Behat
+TAGS: qa, automation, behat
+TWITTER: @davitol
+TITLE: Differences between Otto and Vagrant
+URL: http://scalarsoftware.com/differences-between-otto-and-vagrant/
+DESCRIPTION: Main differences between these Hashicorp tools
+TAGS: devops, virtualization
+TWITTER: @davitol

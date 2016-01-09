@@ -1,0 +1,20 @@
+TITLE: Lego lanza WeDo 2.0
+URL: http://www.xataka.com/robotica-e-ia/llega-wedo-2-0-de-lego-mas-ambicioso-que-nunca-y-con-bluetooth
+DESCRIPTION: Lego lanza su kit de programación y robótica para estudiantes más ambicioso: WeDo 2.0
+TAGS: lego, programación, wedo, robótica, kit
+TWITTER: @amdesantos
+TITLE: Windows 10: un core para gobernarlos a todos
+URL: https://channel9.msdn.com/Blogs/channel9spain/Windows-10-un-core-para-gobernarlos-a-todos
+DESCRIPTION: Video tutorial para aprender a crear tus primeras apps en Windows10
+TAGS: windows10, universal apps, microsoft, development
+TWITTER: @amdesantos
+TITLE: Panorama actual de la Realidad Virtual
+URL: http://www.vidaextra.com/industria/este-es-el-panorama-actual-de-la-realidad-virtual
+DESCRIPTION: Breve repaso al estado actual de la Realidad Virtual y Sistemas Actuales
+TAGS: realidad virtual, oculus rift, HTC Vive, Valve, PlayStation VR, videojuegos
+TWITTER: @amdesantos
+TITLE: Apache Spark
+URL: https://medium.com/@anicolaspp/apache-spark-as-a-distributed-sql-engine-4373e254e0f9#.m1sxw3p78
+DESCRIPTION: pache Spark as a Distributed SQL Engine
+TAGS: Apache Spark, SQL, Distributed, scalability, Hadoop
+TWITTER: @amdesantos

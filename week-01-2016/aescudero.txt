@@ -1,0 +1,10 @@
+TITLE: The Best Way to Hire Developers
+URL: http://www.daedtech.com/best-way-hire-developers/
+DESCRIPTION: Job interview tips for applicants and recruiters
+TAGS: recruiting, developer, programming, blog
+TWITTER: @aescuderogarcia
+TITLE: Microsoft Is Finally Killing Internet Explorer 8, 9, and 10 On January 12th
+URL: http://fossbytes.com/microsoft-is-finally-killing-internet-explorer-8-9-and-10-next-week/
+DESCRIPTION: Microsoft is ending the support for Internet Explorer 8, 9, and 10 on January 12th
+TAGS: Microsoft, Internet Explorer, news
+TWITTER: @aescuderogarcia

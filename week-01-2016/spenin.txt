@@ -1,0 +1,5 @@
+TITLE: Real 3D printing
+URL: http://www.popularmechanics.com/technology/a14586/carbon3d-3d-printer-resin/
+DESCRIPTION: New technique move 3D printing out of the hobby shop and onto every factory floor.
+TAGS: 3D printing, resin
+TWITTER: @SergioPHidalgo

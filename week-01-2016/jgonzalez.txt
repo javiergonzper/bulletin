@@ -1,0 +1,10 @@
+TITLE: Parrot Disco
+URL: http://www.engadget.com/2016/01/04/parrots-disco-drone-takes-to-the-air-as-a-fixed-wing-ultralight/
+DESCRIPTION: The new Parrot Disco. It is a drone (a plane not a quadracopter) with 45 minutes of flying battery and camera of 14mp.
+TAGS: drone, parrot, plane
+TWITTER: @javiergperez
+TITLE: The fuck
+URL: https://github.com/nvbn/thefuck
+DESCRIPTION: Magnificent app which corrects your previous console command.
+TAGS: source, open, python, script
+TWITTER: @javiergperez

@@ -1,0 +1,10 @@
+TITLE: Remix OS, el Android multiventana para PC, el 12 de enero
+URL: http://www.xatakandroid.com/roms-android/podras-descargar-remix-os-el-android-multiventana-para-pc-el-12-de-enero
+DESCRIPTION: Podrás descargar Remix OS, el Android multiventana para PC, el 12 de enero
+TAGS: Windows RemixOS Android
+TWITTER: https://twitter.com/xatakandroid/status/685007905934950401
+TITLE: What's New in C# 6
+URL: https://mva.microsoft.com/en-US/training-courses/developer-productivity-what-s-new-in-c-6-8733?l=VBfRDaS1_904984382
+DESCRIPTION: Are you a C# Developer who wants to be more productive? We've got good news! The latest and greatest features in C# can help.
+TAGS: C# Microsoft
+TWITTER: https://twitter.com/msvirtacademy/status/684902269276536834

@@ -1,0 +1,10 @@
+TITLE: 32 Herramientas low-cost para growth hacking
+URL: http://www.40defiebre.com/herramientas-low-cost-growth-hackers/
+DESCRIPTION: Herramientas de growth hacking para conseguir un crecimiento exponencial
+TAGS: growth hacking, herramientas low-cost
+TWITTER: @davicentef
+TITLE: Dónde encontrar programador/diseñador freelance
+URL: http://growthhackinglabs.com/donde-encontrar-a-los-mejores-programadores-y-disenadores-freelance
+DESCRIPTION: Sitios y métodos para contratar programador/diseñador freelance para proyectos puntuales
+TAGS: contratación, programador, diseñador, freelance
+TWITTER: @davicentef

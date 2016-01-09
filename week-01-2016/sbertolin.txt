@@ -1,0 +1,10 @@
+TITLE: End of support of Internet explorer 8,9 and 10.
+URL: https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support
+DESCRIPTION: Pain for web developers and QA engineers has ended with the end of old IE versions on 2016-01-12.
+TAGS: microsoft, development, web, browsers
+TWITTER: @elfo_de_64_bits
+TITLE: How we enjoy a team week in owncloud project 
+URL: https://owncloud.com/blog-undirected-innovation-in-a-commercial-open-source-setting/
+DESCRIPTION: After every release in owncloud project     there is a team week. Solid Gear team is included.
+TAGS: owncloud, development, open source
+TWITTER: @elfo_de_64_bits

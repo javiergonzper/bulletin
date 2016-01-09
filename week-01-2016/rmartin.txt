@@ -1,0 +1,10 @@
+TITLE: Cartas de facilitación de reuniones
+URL: http://thinkingwithyou.com/2016/01/como-se-hicieron-las-cartas-de-facilitacion-de-reuniones/
+DESCRIPTION: Conoce cómo se hicieron las cartas de facilitación de reuniones en Thinking With You
+TAGS: Agile, VisualThinking, CAS2015
+TWITTER: @RebecaMartinDL
+TITLE: TouchAction
+URL: https://github.com/appium/python-client#touch-actions
+DESCRIPTION: Automated gestures on iOS platform using Appium
+TAGS: Appium, iOS, Gestures
+TWITTER: @RebecaMartinDL

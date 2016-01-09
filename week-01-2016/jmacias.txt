@@ -1,0 +1,10 @@
+TITLE: Awesome-Selfhosted
+URL: https://github.com/Kickball/awesome-selfhosted#bookmarks--link-sharing
+DESCRIPTION: Recopilación de recursos para sysadmins y herramientas self-hosted
+TAGS: sysadmin, devops
+TWITTER: @jmaciasportela
+TITLE: PROGIT 2
+URL: http://git-scm.com/book/en/v2 
+DESCRIPTION: El padre nuestro de git
+TAGS: git, scm
+TWITTER: @jmaciasportela

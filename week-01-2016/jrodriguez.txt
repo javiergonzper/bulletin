@@ -1,0 +1,10 @@
+TITLE: New type of Wi-Fi presented at CES 2016
+URL: http://www.theverge.com/2016/1/4/10691400/new-wifi-halow-standard-announced-iot-ces-2016
+DESCRIPTION: A new Wi-Fi protocol has been presented at CES 2016 which can be an alternative for Bluetooth
+TAGS: mobile, wifi, bluetooth
+TWITTER: @jrodgut
+TITLE: Android N won't implement Oracle's proprietrary Java APIs
+URL: http://www.techspot.com/news/63305-android-n-wont-implement-oracle-proprietary-java-apis.html
+DESCRIPTION: Google has confirmed that new versions of Android will rely on the open-source OpenJDK
+TAGS: android, open-source
+TWITTER: @jrodgut

@@ -1,0 +1,15 @@
+TITLE: PostgreSQL 9.5 Feature Rundown
+URL: http://www.craigkerstiens.com/2015/12/27/postgres-9-5-feature-rundown/
+DESCRIPTION: A nice rundown of the new features in PostgreSQL 9.5
+TAGS: databases, postgres
+TWITTER: @grantc
+TITLE: The Art of the Command Line
+URL: https://github.com/jlevy/the-art-of-command-line
+DESCRIPTION: Get to learn the commmand line from the command line, useful for those needing to work on systems infrastructure
+TAGS: command line, unix, linux
+TWITTER: @grantc
+TITLE: SysAdvent Calendar 2015
+URL: http://sysadvent.blogspot.co.uk/
+DESCRIPTION: 25 posts from Sysadvent 2015 covering a wide range of topics from Platform as a Service to Networking to Devops and working together
+TAGS: hacking, networking, sysadmin
+TWITTER: @grantc

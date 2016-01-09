@@ -1,0 +1,15 @@
+TITLE: After Christmas the average of the App Store Review Times in iOS pass to 12 days :(. 
+URL: http://appreviewtimes.com/
+DESCRIPTION: Appreviewtimes.com tracks the average App Store review times for both the iOS and the Mac App Store using data crowdsourced from iOS and Mac developers
+TAGS: apple, app store, ios
+TWITTER: @ggdiez
+TITLE: Working With JSON in Swift
+URL: http://code.tutsplus.com/tutorials/working-with-json-in-swift--cms-25335?utm_content=buffer41150&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+DESCRIPTION: Good tutorial about how work with JSON in Swift in a native way.
+TAGS: apple, json, swift, ios
+TWITTER: @ggdiez
+TITLE: Creating Custom UIViewController Transitions
+URL: http://www.raywenderlich.com/110536/custom-uiviewcontroller-transitions?utm_content=buffere6a0f&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+DESCRIPTION: Push, pop, cover vertically… you get some nice view controller transitions built in to iOS, but it’s great fun to make your own. 
+TAGS: animation, interface, swift, ios
+TWITTER: @ggdiez

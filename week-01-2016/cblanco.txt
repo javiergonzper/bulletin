@@ -1,0 +1,10 @@
+TITLE: Screenshots from developers: 2002 vs. 2015
+URL: https://anders.unix.se/2015/12/10/screenshots-from-developers--2002-vs.-2015/
+DESCRIPTION: Comparison of different desktops over the years
+TAGS: developers, time, screenshot
+TWITTER: @qa_ops
+TITLE: TED Ed. The benefits of good posture
+URL: http://ed.ted.com/lessons/the-benefits-of-good-posture-murat-dalkinic
+DESCRIPTION: Check your posture!
+TAGS: health, ted, talk, video, advice, posture
+TWITTER: @qa_ops

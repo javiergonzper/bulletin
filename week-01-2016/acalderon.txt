@@ -1,0 +1,15 @@
+﻿TITLE: Evernote's 5%
+URL: http://venturebeat.com/2016/01/05/evernotes-5-problem-offers-a-cautionary-lesson-to-tech-companies/
+DESCRIPTION: A description of what Evernote is facing right now
+TAGS: startups
+TWITTER: @Imrick
+TITLE: Be My Eyes
+URL: http://www.bemyeyes.org
+DESCRIPTION: A Network of Eyes to connect blind people with volunteer helpers from around the world via live video chat
+TAGS: blind, volunteer, app
+TWITTER: @Imrick
+TITLE: Hackaball is almost ready
+URL: http://www.engadget.com/2016/01/06/hackaball-toy-march/
+DESCRIPTION: This programmable toy will ship in March 
+TAGS: kids, toy, hack, kickstarter
+TWITTER: @Imrick
