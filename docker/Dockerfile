@@ -22,7 +22,7 @@ RUN curl -sSL https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOM
 RUN ln -s /phantomjs-$PHANTOM_JS_VERSION/bin/phantomjs /usr/bin/phantomjs
 
 # Install owncloud dependencies
-RUN apt-get update -q && apt-get install -y --force-yes php5 php5-cli git
+RUN apt-get update -q && apt-get install -y --force-yes php5 php5-cli php5-gd git
 
 ADD https://raw.githubusercontent.com/ariya/phantomjs/master/examples/rasterize.js /rasterize.js
 

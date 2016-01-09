@@ -37,26 +37,31 @@ class Bulletin {
 
     private $bulletin = array();
     private $dir = "./";
+    private $createThumnails = false;
     private $dir_webscreenshots;
     private $dir_thumbnails;
     private $thumbWidth = 150;
     private $thumbHeight = 100;
-    private $template = "./templates/bulletin.php";
+    private $template;
 
-    public function __construct($dir) {
-        $this->dir = $dir;
-        $this->dir_webscreenshots = $this->dir . "webscreenshots";
-        $this->dir_thumbnails = $this->dir . "thumbnails";
-        if (!file_exists($this->dir)) {
+    public function __construct($dir, $createThumnails = false) {
+        if (!file_exists($dir)) {
             throw new \Exception("Folder does not exists", 1);
-        }
-        if (!file_exists($this->dir_webscreenshots)) {
-            mkdir($this->dir_webscreenshots, 0777, true);
-        }
-        if (!file_exists($this->dir_thumbnails)) {
-            mkdir($this->dir_thumbnails, 0777, true);
         }        
+        $this->dir = $dir;
+        $this->template = $this->dir . "templates/bulletin.php";
 
+        $this->createThumnails = $createThumnails;
+        if($this->createThumnails){
+            $this->dir_webscreenshots = $this->dir . "webscreenshots";
+            $this->dir_thumbnails = $this->dir . "thumbnails";
+            if (!file_exists($this->dir_webscreenshots)) {
+                mkdir($this->dir_webscreenshots, 0777, true);
+            }
+            if (!file_exists($this->dir_thumbnails)) {
+                mkdir($this->dir_thumbnails, 0777, true);
+            } 
+        }
         try{
             $this->buildBulletin();
         }catch (\Exception $e) {
@@ -70,7 +75,7 @@ class Bulletin {
     }
 
     public function getHTML(){
-
+        return $this->render($this->bulletin);
     }
 
     public function getJSON(){
@@ -98,7 +103,11 @@ class Bulletin {
                     $element['description'] = trim(str_replace("DESCRIPTION:", "", $description));
                     $element['tags'] = trim(str_replace("TAGS:", "", $tags));
                     $element['twitter'] = trim(str_replace("TWITTER:", "", $twitter));
-                    list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
+                    if($this->createThumnails){
+                        list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
+                    } else {
+                        $element['thumb'] = $element['image'] = './templates/thumb.jpg';                
+                    }
                     $this->bulletin[$writer][] = $element;
                 }
                 if (!feof($handle)) {
@@ -114,12 +123,14 @@ class Bulletin {
         if(strpos($headers[0], '200') === false){
             return array('', '');
         }
-        $name = uniqid().".jpg";
-        $command = "phantomjs /rasterize.js";
-        $ex = "$command $url '" . $this->dir_webscreenshots . "/" . $name."' 1280px";
-        system($ex, $result);
-        if($result === false || filesize($this->dir_webscreenshots . "/" . $name) === 0){
-            return array('', '');
+        $name = sha1($url).".jpg";
+        if(!file_exists($this->dir_webscreenshots . "/" . $name)){
+            $command = "phantomjs /rasterize.js";
+            $ex = "$command $url '" . $this->dir_webscreenshots . "/" . $name."' 1280px";
+            system($ex, $result);
+            if($result === false || filesize($this->dir_webscreenshots . "/" . $name) === 0){
+                return array('', '');
+            }
         }
         $this->createThumbs($this->dir_webscreenshots."/".$name, $this->thumbWidth, $this->thumbHeight);
         return array($this->dir_webscreenshots."/".$name, $this->dir_thumbnails."/".$name);
@@ -152,7 +163,6 @@ class Bulletin {
           // save thumbnail into a file
           imagejpeg($thumb_im, str_replace($this->dir_webscreenshots, $this->dir_thumbnails, $image));
         } 
-
     }  
 
     /**
