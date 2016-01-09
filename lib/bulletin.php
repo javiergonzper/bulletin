@@ -49,7 +49,7 @@ class Bulletin {
             throw new \Exception("Folder does not exists", 1);
         }        
         $this->dir = $dir;
-        $this->template = $this->dir . "templates/bulletin.php";
+        $this->template = "./templates/bulletin.php";
 
         $this->createThumnails = $createThumnails;
         if($this->createThumnails){
@@ -171,7 +171,7 @@ class Bulletin {
      * @return string The rendered template.
      */
     public function render(Array $data) {
-        extract($data);
+        //extract($data);
         ob_start();
         include($this->template);
         $content = ob_get_contents();

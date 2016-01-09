@@ -21,7 +21,6 @@
 
 <body>
 	<div class="container">
-
 	  <div class="jumbotron text-center">
 	    <h1>Solid Gear Bulletin</h1> 
 	    <p>Every Monday, we send our newsletter subscribers a free round-up of latest technology trend news and must-reads. It’s a curated digest that enables you to stay updated while saving time.</p>
@@ -40,13 +39,17 @@
 			  </tr>
 			</thead>
 			<tbody>
-			  <tr>
-			    <td><a href="http://www.daedtech.com/best-way-hire-developers/">The Best Way to Hire Developers</a></td>
-			    <td>Job interview tips for applicants and recruiters</td>
-			    <td><a href="http://www.daedtech.com/best-way-hire-developers/"><img src="./thumbnails/sg.gif" alt="sg" height="113" width="150"></a></td>
-			    <td>recruiting, developer, programming, blog</td>
-			    <td><a href="https://twitter.com/aescuderogarcia"><span class="label label-primary">@aescuderogarcia</span></a></td>
-			  </tr>
+		    <?php foreach($data as $editor): ?>
+		    	<?php foreach($editor as $entry): ?>
+				  <tr>
+				    <td><a href="<?php echo $entry['url'];?>"><?php echo $entry['title'];?></a></td>
+				    <td><?php echo $entry['description'];?></td>
+				    <td><a href="<?php echo $entry['url'];?>"><img src="<?php echo $entry['thumb'];?>" height="113" width="150"></a></td>
+				    <td><?php echo $entry['tags'];?></td>
+				    <td><a href="https://twitter.com/<?php echo $entry['twitter'];?>"><span class="label label-primary"><?php echo $entry['twitter'];?></span></a></td>
+				  </tr>
+				<?php endforeach; ?>
+			<?php endforeach; ?>
 			</tbody>
 		</table>
 		</div>  

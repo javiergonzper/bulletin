@@ -10,10 +10,12 @@ if (!isset($argv[1])) {
 include_once './lib/bulletin.php';
 
 try{
-	$bulletin = new \SG\bulletin\lib\Bulletin($argv[1]);
+    $bulletin = new \SG\bulletin\lib\Bulletin($argv[1]);
 }catch (\Exception $e){
-	echo "Exception".PHP_EOL;
+    echo "Exception".$e->getMessage().PHP_EOL;
 }
+
+echo print_r($bulletin->getHTML(), true);
 
 //TODO: Render HTML
 //TODO: Create ZIP with content
