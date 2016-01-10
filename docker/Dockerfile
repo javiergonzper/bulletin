@@ -26,8 +26,6 @@ RUN apt-get update -q && apt-get install -y --force-yes php5 php5-cli php5-gd gi
 
 ADD rasterize.js /rasterize.js
 
-RUN echo "$(tail -n +2 /rasterize.js)" > /rasterize.js
-
 VOLUME ["/opt/bulletin"]
 
 # Expose port
