@@ -107,10 +107,10 @@ class Bulletin {
                     if($this->createThumnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
                         if($element['thumb'] === ''){
-                            $element['thumb'] = $element['image'] = './thumbnails/thumb.jpg'; 
+                            $element['thumb'] = $element['image'] = $this->dir_thumbnails.'/thumb.jpg'; 
                         }
                     } else {
-                        $element['thumb'] = $element['image'] = './thumbnails/thumb.jpg';             
+                        $element['thumb'] = $element['image'] = $this->dir_thumbnails.'/thumb.jpg';             
                     }
                     $this->bulletin[$writer][] = $element;
                 }
@@ -137,7 +137,7 @@ class Bulletin {
                 return array('', '');
             }
         }
-        return array( "./webscreenshots/".$name, "./thumbnails/".$name);
+        return array( $this->dir_webscreenshots."/".$name, $this->dir_thumbnails."/".$name);
     }
 
     private function createThumbs($image, $thumbWidth, $thumbHeight){

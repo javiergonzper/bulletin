@@ -44,7 +44,7 @@
 				  <tr>
 				    <td><a href="<?php echo $entry['url'];?>"><?php echo $entry['title'];?></a></td>
 				    <td><?php echo $entry['description'];?></td>
-				    <td><a href="<?php echo $entry['url'];?>"><img src="<?php echo $entry['thumb'];?>" height="113" width="150"></a></td>
+				    <td><a href="<?php echo $entry['url'];?>"><img src="<?php echo 'data:image/jpg;base64,'.base64_encode(file_get_contents($entry['thumb']));?>" height="113" width="150"></a></td>
 				    <td><?php echo $entry['tags'];?></td>
 				    <td><a href="https://twitter.com/<?php echo $entry['twitter'];?>"><span class="label label-primary"><?php echo $entry['twitter'];?></span></a></td>
 				  </tr>
