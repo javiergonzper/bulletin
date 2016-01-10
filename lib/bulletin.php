@@ -60,6 +60,7 @@ class Bulletin {
             }
             if (!file_exists($this->dir_thumbnails)) {
                 mkdir($this->dir_thumbnails, 0777, true);
+                copy("./templates/thumb.jpg", $this->dir_thumbnails."/thumb.jpg");
             } 
         }
         try{
@@ -105,8 +106,11 @@ class Bulletin {
                     $element['twitter'] = trim(str_replace("TWITTER:", "", $twitter));
                     if($this->createThumnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
+                        if($element['thumb'] === ''){
+                            $element['thumb'] = $element['image'] = $this->dir_thumbnails.'/thumb.jpg'; 
+                        }
                     } else {
-                        $element['thumb'] = $element['image'] = './templates/thumb.jpg';                
+                        $element['thumb'] = $element['image'] = $this->dir_thumbnails.'/thumb.jpg';             
                     }
                     $this->bulletin[$writer][] = $element;
                 }

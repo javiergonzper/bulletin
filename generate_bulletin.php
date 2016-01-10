@@ -15,7 +15,7 @@ try{
     echo "Exception".$e->getMessage().PHP_EOL;
 }
 
-echo print_r($bulletin->getHTML(), true);
+echo $bulletin->getHTML();
 
 //TODO: Render HTML
 //TODO: Create ZIP with content
