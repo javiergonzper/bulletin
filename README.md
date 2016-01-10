@@ -24,6 +24,9 @@ Build docker image to work in
     ```cd /opt/bulletin && ./generate_bulletin.php /opt/bulletin/week-01-2016/ http://solidgear.es/bulletin-images/012016 true```
 * SCP /opt/bulletin/week-01-2016/ to solidgear public website, because thumbnails must be in a webserver.
 
-    ```http://solidgear.es/bulletin-images/012016```
-
-NOTE: This is a very preliminary MVP project
+    ```
+    http://solidgear.es/bulletin-images/012016
+    ```
+    
+    
+**NOTE: This is a very preliminary MVP project**
