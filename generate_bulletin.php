@@ -15,7 +15,7 @@ try{
     echo "Exception".$e->getMessage().PHP_EOL;
 }
 
-file_put_contents ($argv[1]."index.json", $bulletin->getBulletin());
+file_put_contents ($argv[1]."index.json", print_r($bulletin->getBulletin(), true));
 file_put_contents ($argv[1]."index.html", $bulletin->getHTML());
 
 echo "Done".PHP_EOL;
