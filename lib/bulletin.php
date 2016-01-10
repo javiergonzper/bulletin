@@ -103,10 +103,10 @@ class Bulletin {
                     $element = array();
                     $element['title'] = htmlentities(trim(str_replace("TITLE:", "", $title)));
                     $element['url'] = trim(str_replace("URL:", "", $url));
-                    $element['description'] = htmlentities(htmlentities(trim(str_replace("DESCRIPTION:", "", $description)));
+                    $element['description'] = htmlentities(trim(str_replace("DESCRIPTION:", "", $description)));
                     $element['tags'] = htmlentities(trim(str_replace("TAGS:", "", $tags)));
                     $element['twitter'] = trim(str_replace("TWITTER:", "", $twitter));
-                    if($this->createThumnails){
+                    if($this->createThumbnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
                         if($element['thumb'] === ''){
                             $element['thumb'] = $element['image'] = $this->bulletinURL.'thumbnails/thumb.jpg'; 
