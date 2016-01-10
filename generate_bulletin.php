@@ -2,8 +2,8 @@
 
 <?php
 
-if (!isset($argv[1]) || !isset($argv[2])) {
-    echo "Usage:\n\tgenerate_bulletin.php <SOURCE_FOLDER> <CREATE_THUMBNAILS true|false>".PHP_EOL;
+if (!isset($argv[1]) || !isset($argv[2]) || !isset($argv[3])) {
+    echo "Usage:\n\tgenerate_bulletin.php <SOURCE_FOLDER> <PUBLIC_URL> <CREATE_THUMBNAILS true|false>".PHP_EOL;
     die();
 }
 

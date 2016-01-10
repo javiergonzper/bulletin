@@ -27,8 +27,8 @@
 	<div class="container">
 	  <div class="jumbotron text-center">
 	    <h1>Solid Gear Bulletin</h1> 
-	    <p>Every Monday, we send our newsletter subscribers a free round-up of latest technology trend news and must-reads. It’s a curated digest that enables you to stay updated while saving time.</p>
-		<p>It is compiled with suggestions from SolidGear team members.</p> 
+	    <p>Every Monday, we send our newsletter subscribers a free round-up of latest technology trend news and must-reads. It's a curated digest that enables you to stay updated while saving time.</p>
+		<p>It's compiled with suggestions from SolidGear team members.</p> 
 	  </div>
 		<h2>Week <?php echo date("W - Y"); ?></h2>
 		<div class="table-responsive">          

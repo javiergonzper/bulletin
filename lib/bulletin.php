@@ -43,12 +43,14 @@ class Bulletin {
     private $thumbWidth = 150;
     private $thumbHeight = 100;
     private $template;
+    private $bulletinURL;
 
-    public function __construct($dir, $createThumnails = false) {
+    public function __construct($dir, $url, $createThumnails = false) {
         if (!file_exists($dir)) {
             throw new \Exception("Folder does not exists", 1);
         }        
         $this->dir = $dir;
+        $this->bulletinURL = $url;
         $this->template = "./templates/bulletin.php";
 
         $this->createThumnails = $createThumnails;
@@ -107,10 +109,10 @@ class Bulletin {
                     if($this->createThumnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
                         if($element['thumb'] === ''){
-                            $element['thumb'] = $element['image'] = 'thumnails/thumb.jpg'; 
+                            $element['thumb'] = $element['image'] = $this->bulletinURL.'thumnails/thumb.jpg'; 
                         }
                     } else {
-                        $element['thumb'] = $element['image'] = 'thumbnails/thumb.jpg';             
+                        $element['thumb'] = $element['image'] = $this->bulletinURL.'thumbnails/thumb.jpg';             
                     }
                     $this->bulletin[$writer][] = $element;
                 }
@@ -137,7 +139,7 @@ class Bulletin {
                 return array('', '');
             }
         }
-        return array( "webscreenshots/".$name, "thumbnails/".$name);
+        return array($this->bulletinURL."webscreenshots/".$name, $this->bulletinURL."thumbnails/".$name);
     }
 
     private function createThumbs($image, $thumbWidth, $thumbHeight){
