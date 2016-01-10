@@ -37,7 +37,7 @@ class Bulletin {
 
     private $bulletin = array();
     private $dir = "./";
-    private $createThumnails = false;
+    private $createThumbnails = false;
     private $dir_webscreenshots;
     private $dir_thumbnails;
     private $thumbWidth = 150;
@@ -45,7 +45,7 @@ class Bulletin {
     private $template;
     private $bulletinURL;
 
-    public function __construct($dir, $url, $createThumnails = false) {
+    public function __construct($dir, $url, $createThumbnails = false) {
         if (!file_exists($dir)) {
             throw new \Exception("Folder does not exists", 1);
         }        
@@ -53,8 +53,8 @@ class Bulletin {
         $this->bulletinURL = $url;
         $this->template = "./templates/bulletin.php";
 
-        $this->createThumnails = $createThumnails;
-        if($this->createThumnails){
+        $this->createThumbnails = $createThumbnails;
+        if($this->createThumbnails){
             $this->dir_webscreenshots = $this->dir . "webscreenshots";
             $this->dir_thumbnails = $this->dir . "thumbnails";
             if (!file_exists($this->dir_webscreenshots)) {
@@ -101,10 +101,10 @@ class Bulletin {
 
                 while (($title = fgets($handle)) !== false && ($url = fgets($handle)) !== false && ($description = fgets($handle)) !== false && ($tags = fgets($handle)) !== false && ($twitter = fgets($handle)) !== false){
                     $element = array();
-                    $element['title'] = trim(str_replace("TITLE:", "", $title));
+                    $element['title'] = htmlentities(trim(str_replace("TITLE:", "", $title)));
                     $element['url'] = trim(str_replace("URL:", "", $url));
-                    $element['description'] = trim(str_replace("DESCRIPTION:", "", $description));
-                    $element['tags'] = trim(str_replace("TAGS:", "", $tags));
+                    $element['description'] = htmlentities(htmlentities(trim(str_replace("DESCRIPTION:", "", $description)));
+                    $element['tags'] = htmlentities(trim(str_replace("TAGS:", "", $tags)));
                     $element['twitter'] = trim(str_replace("TWITTER:", "", $twitter));
                     if($this->createThumnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
