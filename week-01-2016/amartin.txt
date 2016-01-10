@@ -1,7 +1,7 @@
 TITLE: Lego lanza WeDo 2.0
 URL: http://www.xataka.com/robotica-e-ia/llega-wedo-2-0-de-lego-mas-ambicioso-que-nunca-y-con-bluetooth
-DESCRIPTION: Lego lanza su kit de programación y robótica para estudiantes más ambicioso: WeDo 2.0
-TAGS: lego, programación, wedo, robótica, kit
+DESCRIPTION: Lego lanza su kit de programacion y robotica para estudiantes mas ambicioso: WeDo 2.0
+TAGS: lego, programacion, wedo, robotica, kit
 TWITTER: @amdesantos
 TITLE: Windows 10: un core para gobernarlos a todos
 URL: https://channel9.msdn.com/Blogs/channel9spain/Windows-10-un-core-para-gobernarlos-a-todos
