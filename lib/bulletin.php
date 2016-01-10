@@ -107,10 +107,10 @@ class Bulletin {
                     if($this->createThumnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
                         if($element['thumb'] === ''){
-                            $element['thumb'] = $element['image'] = $this->dir_thumbnails.'/thumb.jpg'; 
+                            $element['thumb'] = $element['image'] = './thumbnails/thumb.jpg'; 
                         }
                     } else {
-                        $element['thumb'] = $element['image'] = $this->dir_thumbnails.'/thumb.jpg';             
+                        $element['thumb'] = $element['image'] = './thumbnails/thumb.jpg';             
                     }
                     $this->bulletin[$writer][] = $element;
                 }
@@ -132,41 +132,43 @@ class Bulletin {
             $command = "phantomjs /rasterize.js";
             $ex = "$command $url '" . $this->dir_webscreenshots . "/" . $name."' 1280px";
             system($ex, $result);
-            if($result === false || filesize($this->dir_webscreenshots . "/" . $name) === 0){
+            $this->createThumbs($this->dir_webscreenshots."/".$name, $this->thumbWidth, $this->thumbHeight);            
+            if(!file_exists($this->dir_thumbnails . "/" . $name)){
                 return array('', '');
             }
         }
-        $this->createThumbs($this->dir_webscreenshots."/".$name, $this->thumbWidth, $this->thumbHeight);
-        return array($this->dir_webscreenshots."/".$name, $this->dir_thumbnails."/".$name);
+        return array( "./webscreenshots/".$name, "./thumbnails/".$name);
     }
 
     private function createThumbs($image, $thumbWidth, $thumbHeight){
-        // parse path for the extension
-        $info = pathinfo($image);
-        // continue only if this is a JPEG image
-        if ( strtolower($info['extension']) == 'jpg' && exif_imagetype($image) == IMAGETYPE_JPEG) 
-        {
-          // load image and get image size
-          $img = imagecreatefromjpeg($image);
-          $width = imagesx($img);
-          $height = imagesy($img);
+        if(file_exists($image)){
+            // parse path for the extension
+            $info = pathinfo($image);
+            // continue only if this is a JPEG image
+            if ( strtolower($info['extension']) == 'jpg' && exif_imagetype($image) == IMAGETYPE_JPEG) 
+            {
+              // load image and get image size
+              $img = imagecreatefromjpeg($image);
+              $width = imagesx($img);
+              $height = imagesy($img);
 
-          // calculate thumbnail size
-          $new_width = $thumbWidth;
-          $new_height = floor($height * ($thumbWidth / $width));
+              // calculate thumbnail size
+              $new_width = $thumbWidth;
+              $new_height = floor($height * ($thumbWidth / $width));
 
-          // create a new temporary image
-          $tmp_img = imagecreatetruecolor($new_width, $new_height);
+              // create a new temporary image
+              $tmp_img = imagecreatetruecolor($new_width, $new_height);
 
-          // copy and resize old image into new image 
-          imagecopyresized($tmp_img, $img, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
+              // copy and resize old image into new image 
+              imagecopyresized($tmp_img, $img, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
 
-          $to_crop_array = array('x' =>0 , 'y' => 0, 'width' => $thumbWidth, 'height'=> $thumbHeight);
-          $thumb_im = imagecrop($tmp_img, $to_crop_array);
+              $to_crop_array = array('x' =>0 , 'y' => 0, 'width' => $thumbWidth, 'height'=> $thumbHeight);
+              $thumb_im = imagecrop($tmp_img, $to_crop_array);
 
-          // save thumbnail into a file
-          imagejpeg($thumb_im, str_replace($this->dir_webscreenshots, $this->dir_thumbnails, $image));
-        } 
+              // save thumbnail into a file
+              imagejpeg($thumb_im, str_replace($this->dir_webscreenshots, $this->dir_thumbnails, $image));
+            } 
+        }
     }  
 
     /**

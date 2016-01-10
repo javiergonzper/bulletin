@@ -1,10 +1,10 @@
 TITLE: Awesome-Selfhosted
 URL: https://github.com/Kickball/awesome-selfhosted#bookmarks--link-sharing
-DESCRIPTION: Recopilación de recursos para sysadmins y herramientas self-hosted
+DESCRIPTION: This is a list of Free Software network services and web applications which can be hosted locally. Non-Free software is listed on the Non-Free page.
 TAGS: sysadmin, devops
 TWITTER: @jmaciasportela
 TITLE: PROGIT 2
 URL: http://git-scm.com/book/en/v2 
-DESCRIPTION: El padre nuestro de git
+DESCRIPTION: Git Bible
 TAGS: git, scm
 TWITTER: @jmaciasportela
