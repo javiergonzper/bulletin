@@ -10,7 +10,7 @@ if (!isset($argv[1]) || !isset($argv[2]) || !isset($argv[3])) {
 include_once './lib/bulletin.php';
 
 try{
-    $bulletin = new \SG\bulletin\lib\Bulletin($argv[1], $argv[2]);
+    $bulletin = new \SG\bulletin\lib\Bulletin($argv[1], $argv[2], $argv[3]);
 }catch (\Exception $e){
     echo "Exception".$e->getMessage().PHP_EOL;
 }

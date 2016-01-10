@@ -109,7 +109,7 @@ class Bulletin {
                     if($this->createThumnails){
                         list($element['image'], $element['thumb']) = $this->getWebScreenShot($element['url']);
                         if($element['thumb'] === ''){
-                            $element['thumb'] = $element['image'] = $this->bulletinURL.'thumnails/thumb.jpg'; 
+                            $element['thumb'] = $element['image'] = $this->bulletinURL.'thumbnails/thumb.jpg'; 
                         }
                     } else {
                         $element['thumb'] = $element['image'] = $this->bulletinURL.'thumbnails/thumb.jpg';             
